@@ -10,12 +10,12 @@ import {
 import useStyles from '../utils/styles';
 import NextLink from 'next/link';
 
-export default function Layout({ children }) {
+export default function Layout({ title, children }) {
   const classes = useStyles();
   return (
     <div>
       <Head>
-        <title>LULO STORE</title>
+        <title>{title? `${title} - LULO STORE` : 'LULO STORE'}</title>
       </Head>
       <AppBar position="static" className={classes.navbar}>
         <Toolbar>
@@ -37,7 +37,7 @@ export default function Layout({ children }) {
       </AppBar>
       <Container className={classes.main}>{children}</Container>
       <footer className={classes.footer}>
-        <Typography>All rights reserved. LULO STORE 2021.</Typography>
+        <Typography>Derechos reservados | LULO 2021.</Typography>
       </footer>
     </div>
   );
