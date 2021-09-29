@@ -6,7 +6,6 @@ import NextLink from 'next/link';
 import Image from 'next/image';
 import {
   Grid,
-  Link,
   List,
   ListItem,
   Typography,
@@ -24,7 +23,7 @@ export default function ProductScreen() {
     return <div>Product Not Found</div>;
   }
   return (
-    <Layout title={product.name}>
+    <Layout title={product.name} description={product.description}>
       <div className={classes.section}>
         <NextLink href="/" passHref>
           Volver a la pagina principal
@@ -42,14 +41,28 @@ export default function ProductScreen() {
         </Grid>
         <Grid item md={3} xs={12}>
           <List>
-            <ListItem component="h1">{product.name}</ListItem>
             <ListItem>
-              <ListItem>Categoria: {product.category}</ListItem>
-              <ListItem>Modelo: {product.brand}</ListItem>
-              <ListItem>Raiting: {product.raiting}</ListItem>
+              <Typography component="h1" variant="h1">
+                {product.name}
+              </Typography>
             </ListItem>
-            <ListItem>Descripcion: {product.description}</ListItem>
-            <ListItem>Precio: {product.price}</ListItem>
+            <ListItem>
+              <ListItem>
+                <Typography>Categoria: {product.category}</Typography>
+              </ListItem>
+              <ListItem>
+                <Typography>Modelo: {product.brand}</Typography>
+              </ListItem>
+              <ListItem>
+                <Typography>Raiting: {product.raiting}</Typography>
+              </ListItem>
+            </ListItem>
+            <ListItem>
+              <Typography>Descripcion: {product.description}</Typography>
+            </ListItem>
+            <ListItem>
+              <Typography>Precio: {product.price}</Typography>
+            </ListItem>
           </List>
         </Grid>
         <Grid item md={3} xs={12}>

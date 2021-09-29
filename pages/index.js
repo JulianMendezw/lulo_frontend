@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <Layout>
       <div>
-        <h1>Products</h1>
+        <h1>Productos populares</h1>
         <Grid container spacing={3}>
           {data.products.map((product) => (
             <Grid item md={4} key={product.name}>
@@ -36,7 +36,7 @@ export default function Home() {
                 <CardActions>
                   <Typography>${product.price}</Typography>
                   <Button size="small" color="primary">
-                    Add to cart
+                    Agregar al carrito
                   </Button>
                 </CardActions>
               </Card>
