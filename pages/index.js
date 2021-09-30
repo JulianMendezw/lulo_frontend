@@ -10,12 +10,15 @@ import {
 } from '@material-ui/core';
 import data from '../utils/data';
 import Layout from '../components/Layout';
+import Slideshow from '../components/Slideshow';
+
 import NextLink from 'next/link';
 
 export default function Home() {
   return (
     <Layout>
       <div>
+        <Slideshow></Slideshow>
         <h1>Productos populares</h1>
         <Grid container spacing={3}>
           {data.products.map((product) => (
