@@ -10,7 +10,7 @@ import {
 } from '@material-ui/core';
 import data from '../utils/data';
 import Layout from '../components/Layout';
-import Slideshow from '../components/Slideshow';
+import Slideshow from '../components/Slideshow/Slideshow';
 
 import NextLink from 'next/link';
 
